@@ -115,6 +115,6 @@ def missingPlayers(player):
 
 def shouldNotBeSupporter(player):
     if role.isChaser(player.role):
-        return shared.ballOffForNFrames(120)
+        return shared.ballOffForNFrames(120)(player)
     return not shouldBeSupporter(player)
 
